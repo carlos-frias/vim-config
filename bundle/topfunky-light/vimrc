@@ -3,8 +3,6 @@
 
 set nocompatible                  " Must come first because it changes other options.
 
-silent! call pathogen#runtime_append_all_bundles()
-
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
@@ -24,27 +22,31 @@ set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
 set number                        " Show line numbers.
-set ruler                         " Show cursor position.  set incsearch                     " Highlight matches as you type.
+set ruler                         " Show cursor position.
+
+set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
-set wrap                          " Turn on line wrapping.  set scrolloff=3                   " Show 3 lines of context around the cursor.
+set wrap                          " Turn on line wrapping.
+set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
 
 set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
-set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+" set nowritebackup                 " And again.
+set directory=/tmp  " Keep swap files in one location
 
 " UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
-set expandtab                    " Use spaces instead of tabs
+set autoindent
+"set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Or use vividchalk
 colorscheme topfunky-light
@@ -60,8 +62,18 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" NERDTree
+" set autochdir
+let NERDTreeChDirMode=2
+nnoremap <leader>n :NERDTreeToggle .<CR>
+
+" Fuzzy Search
+map <leader>f :FuzzyFinderTextMate<Enter>
+map <leader>F :FuzzyFinderFile<Enter>
+map <leader>d :FuzzyFinderFileWithCurrentBufferDir<Enter>
+
 " Uncomment to use Jamis Buck's file opening plugin
-map <Leader>t :FuzzyFinderTextMate<Enter>
+"map <Leader>t :FuzzyFinderTextMate<Enter>
 
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
@@ -71,10 +83,13 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 "vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+" autocmd FileType ruby set foldmethod=syntax
+autocmd FileType mxml  setlocal shiftwidth=4 tabstop=4
 
-" For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
-autocmd BufNewFile,BufRead *_spec.rb compiler rspec
+" Flex Stuff
+au BufNewFile,BufRead *.mxml set filetype=mxml
+au BufNewFile,BufRead *.as set filetype=actionscript
+syntax on         
 
-
+" Snippets
+:filetype plugin on

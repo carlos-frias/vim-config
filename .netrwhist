@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/cfrias/Projects/realestate-workspace/enforcement-reader-plugin/src'
 let g:netrw_dirhist_2='/home/cfrias/Projects/realestate-workspace/enforcement-reader-plugin/src/groovy'
 let g:netrw_dirhist_3='/home/cfrias/Projects/realestate-workspace/enforcement-reader-plugin/src/groovy/enforcement'
+let g:netrw_dirhist_4='/home/cfrias/Projects/vim-workspace/peepcode-vim-code'

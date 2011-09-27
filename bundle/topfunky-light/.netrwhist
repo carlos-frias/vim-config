@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/chris/.gvfs/sftp for upstart on upstarthq.dev'
+let g:netrw_dirhist_2='/home/chris/.gvfs/sftp for upstart on upstarthq.dev/var'
+let g:netrw_dirhist_3='/home/chris/.gvfs/sftp for upstart on upstarthq.dev/var/www'
+let g:netrw_dirhist_4='/home/chris/.gvfs/sftp for upstart on upstarthq.dev/var/www/upstart'
+let g:netrw_dirhist_5='/home/chris/.gvfs/sftp for upstart on upstarthq.dev/var/www/upstart/metrics'
+let g:netrw_dirhist_6='/home/chris/.gvfs/sftp for upstart on upstarthq.dev/var/www/upstart/metrics/src'
+let g:netrw_dirhist_7='/home/chris'
