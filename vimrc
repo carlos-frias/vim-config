@@ -24,10 +24,12 @@ set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
 set number                        " Show line numbers.
-set ruler                         " Show cursor position.  set incsearch                     " Highlight matches as you type.
+set ruler                         " Show cursor position.  
+set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
-set wrap                          " Turn on line wrapping.  set scrolloff=3                   " Show 3 lines of context around the cursor.
+set wrap                          " Turn on line wrapping.  
+set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
 
