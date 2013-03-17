@@ -19,3 +19,6 @@
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = git@github.com:tpope/vim-haml.git
+[submodule "bundle/grails-vim"]
+	path = bundle/grails-vim
+	url = https://github.com/NathanNeff/grails-vim.git
