@@ -31,3 +31,6 @@
 [submodule "bundle/grails-vim"]
 	path = bundle/grails-vim
 	url = https://github.com/NathanNeff/grails-vim.git
+[submodule "bundle/vim-statline"]
+	path = bundle/vim-statline
+	url = git@github.com:millermedeiros/vim-statline.git
