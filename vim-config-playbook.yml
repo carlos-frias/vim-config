@@ -1,0 +1,13 @@
+---
+- name: Configure VIM locally
+  hosts: localhost
+  connection: local
+
+  tasks: 
+  - name: Update local repo
+    git:
+      repo: git@github.com/carlosfrias/vim-config.git
+      dest: ~/.vim
+      track_submodules: yes
+
+
